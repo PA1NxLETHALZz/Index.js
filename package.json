@@ -1,10 +1,10 @@
 {
 
-  "name": "Example",
+  "name": "Statman",
 
-  "description": "Example",
+  "description": "Statmans Child",
 
-  "version": "0.0.0",
+  "version": "1.0.0",
 
   "main": "bot.js",
 
