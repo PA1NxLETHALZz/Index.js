@@ -22,7 +22,11 @@ client.on('message', message => {
 
 });
 
+client.on("message", (message) => {
  
+  // This code runs when the event is triggered
+ 
+});
 
 // THIS  MUST  BE  THIS  WAY
 
