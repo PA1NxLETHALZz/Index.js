@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
  
 
-client.on('ready', () => {
+client.on('Ready', () => {
 
     console.log('I am ready!');
 
@@ -14,9 +14,9 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
-    if (message.content === 'ping') {
+    if (message.content === 'Ping') {
 
-       message.reply('pong');
+       message.reply('Pong');
 
        }
 
@@ -30,15 +30,15 @@ client.on("message", (message) => {
 
 client.on("message", (message) => {
  
-  if (message.content.startsWith("ping")) {
+  if (message.content.startsWith("Ping")) {
    
-    message.channel.send("pong!");
+    message.channel.send("Pong!");
    
   } else
 
-  if (message.content.startsWith("foo")) {
+  if (message.content.startsWith("Foo")) {
    
-    message.channel.send("bar!");
+    message.channel.send("Bar!");
   }
  
 });
@@ -53,7 +53,7 @@ client.on("message", (message) => {
  
   if (!message.content.startsWith(prefix)) return;
 
-  if (message.content.startsWith(prefix + "ping")) {
+  if (message.content.startsWith(prefix + "Ping")) {
    
     message.channel.send("pong!");
    
