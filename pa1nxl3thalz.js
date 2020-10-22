@@ -67,10 +67,6 @@ client.on("message", (message) => {
  
 });
 
-const prefix = "!";
-
-client.on("message", (message) => {
- 
   // our new check:
  
   if (!message.content.startsWith(prefix) || message.author.bot) return;
