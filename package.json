@@ -6,11 +6,11 @@
 
   "version": "1.0.0",
 
-  "main": "index.js",
+  "main": "pa1nxlethalz.js",
 
   "scripts": {
 
-    "start": "node index.js"
+    "start": "node pa1nxl3thalz.js"
 
   },
 
