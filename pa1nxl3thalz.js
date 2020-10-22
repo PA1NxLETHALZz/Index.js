@@ -67,6 +67,18 @@ client.on("message", (message) => {
  
 });
 
+const prefix = "!";
+
+client.on("message", (message) => {
+ 
+  // our new check:
+ 
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
+ 
+  // [rest of the code]
+ 
+});
+
 // THIS  MUST  BE  THIS  WAY
 
 client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
