@@ -67,12 +67,6 @@ client.on("message", (message) => {
  
 });
 
-client.on('message', msg => {    
-  if (msg.content === `"Your message!"`) {      
-    msg.channel.type === (`"dm"`) + msg.author.sendMessage(`"Your other message"`) 
-  }
-}
-
 // THIS  MUST  BE  THIS  WAY
 
 client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
