@@ -67,33 +67,15 @@ client.on("message", (message) => {
  
 });
 
-if (cmd === `!dm`) {
- 
- let dUser =
-     
-  message.guild.member(message.mentions.users.first()) ||
-     
-  message.guild.members.get(args[0]);
- 
- if (!dUser) return message.channel.send("Can't find user!");
- 
- if (!message.member.hasPermission('ADMINISTRATOR'))
-  
-  return message.reply("You can't you that command!");
- 
- let dMessage = args.join(' ').slice(22);
- 
- if (dMessage.length < 1) return message.reply('You must supply a message!');
-
- dUser.send(`${dUser} A moderator from WP Coding Club sent you: ${dMessage}`);
-
- message.author.send(
-  
-  `${message.author} You have sent your message to ${dUser}`
-  
- );
- 
-}
+case 'dm':
+  mentiondm = message.mentions.users.first();
+  message.channel.bulkDelete(1);
+  if (!message.member.roles.cache.some(role => role.name === "Owner")) return message.channel.send('Beep Boing: This command is way too powerful for you to use!');
+  if (mentiondm == null) return message.reply('Beep Boing: No user to send message to!');
+  mentionMessage = message.content.slice(3);
+  mentiondm.send(mentionMessage);
+  console.log('Message Sent!')
+  break;
 
 // THIS  MUST  BE  THIS  WAY
 
