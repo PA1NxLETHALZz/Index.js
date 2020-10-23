@@ -28,6 +28,30 @@ client.on("message", (message) => {
  
 });
 
+// Set the prefix
+
+const prefix = "!";
+
+client.on("message", (message) => {
+ 
+  // Exit and stop if it's not there
+ 
+  if (!message.content.startsWith(prefix)) return;
+
+  if (message.content.startsWith(prefix + "Ping")) {
+   
+    message.channel.send("pong!");
+   
+  } else
+   
+  if (message.content.startsWith(prefix + "foo")) {
+   
+    message.channel.send("bar!");
+   
+  }
+ 
+});
+
 import discord
 
 from discord.ext.commands import commands,has_permissions, MissingPermissions
@@ -122,30 +146,6 @@ client.on("message", (message) => {
   if (message.content.startsWith("Foo")) {
    
     message.channel.send("Bar!");
-  }
- 
-});
-
-// Set the prefix
-
-const prefix = "!";
-
-client.on("message", (message) => {
- 
-  // Exit and stop if it's not there
- 
-  if (!message.content.startsWith(prefix)) return;
-
-  if (message.content.startsWith(prefix + "Ping")) {
-   
-    message.channel.send("pong!");
-   
-  } else
-   
-  if (message.content.startsWith(prefix + "foo")) {
-   
-    message.channel.send("bar!");
-   
   }
  
 });
