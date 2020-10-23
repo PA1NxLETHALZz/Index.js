@@ -11,6 +11,8 @@ client.on('Ready', () => {
   if (msg.content === `"Your message!"`) {  
       
     msg.channel.type === (`"dm"`) + msg.author.sendMessage(`"Your other message"`);
+      
+      }
 
 });
 
