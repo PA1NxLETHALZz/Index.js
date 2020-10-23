@@ -6,17 +6,7 @@ client.on('Ready', () => {
 
     console.log('I am ready!');
  
- client.on('message', msg => {    
-     
-  if (msg.content === `"Your message!"`) {  
-      
-    msg.channel.type === (`"dm"`) + msg.author.sendMessage(`"Your other message"`);
-      
-      }
-
 });
-
- 
 
 client.on('message', message => {
 
