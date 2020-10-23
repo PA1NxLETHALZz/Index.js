@@ -67,16 +67,6 @@ client.on("message", (message) => {
  
 });
 
-case 'dm':
-  mentiondm = message.mentions.users.first();
-  message.channel.bulkDelete(1);
-  if (!message.member.roles.cache.some(role => role.name === "Owner")) return message.channel.send('Beep Boing: This command is way too powerful for you to use!');
-  if (mentiondm == null) return message.reply('Beep Boing: No user to send message to!');
-  mentionMessage = message.content.slice(3);
-  mentiondm.send(mentionMessage);
-  console.log('Message Sent!')
-  break;
-
 // THIS  MUST  BE  THIS  WAY
 
 client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
